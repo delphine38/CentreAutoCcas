@@ -4,29 +4,33 @@
 <div class="container-fluid row  d-flex justify-content-center">
 
   <div class="container">
+    <div class="row">
+      <div class="card" style="width: 20rem">
+        <a href="#"><img src="../../assets/image/audiA1.jpg" class="card-img-top mt-5" alt="audiA1"></a>
 
-    <div class="card" style="width: 20rem">
-      <a href="#"><img src="../../assets/image/audiA1.jpg" class="card-img-top mt-5" alt="audiA1"></a>
-      <!-- <a [routerLink]="['/grande-description']">AudiA1aaaaaaaaaaaaaaaaa</a> -->
-      <div class="card-body">
-        <!-- <a class="text-decoration-none text-white" routerLink="/annonce-detaillees">AudiA1aaaaaaaaaaaaaaaaa</a> -->
-        <h5 class="card-title text-center">{{voiture.titre}}</h5>
-        <!-- <p class="card-text">{{voiture.descriptionLongue}}</p> -->
-        <!-- <button type="button" class="btn" (click)="changeOuiNonCourte(click)="descriptionLongue();">Voir plus</button> -->
+        <div class="card-body">
+          <h5 class="card-title text-center">{{voiture.titre}}</h5>
+          <p class="card-text">{{voiture.descriptionLongue}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"> Année de mise en circulation : {{voiture.anneeMiseCiruclation}}</li>
+          <li class="list-group-item">Kilométrage : {{voiture.kilometrage}}</li>
+          <li class="list-group-item">Prix : {{voiture.prix}} €</li>
+          <li class="list-group-item">Marque : {{voiture.marque}}</li>
+          <li class="list-group-item">Modèle : {{voiture.modele}}</li>
+          <li class="list-group-item">Type de carburant : {{voiture.typeCarburant}}</li>
+          <li class="list-group-item">Reference : {{voiture.reference}}</li>
+        </ul>
+        <div class="card-body pb-5">
+          <a href="#" class="card-link text-decoration-none">Acheter</a>
+          <a href="#" class="card-link text-decoration-none">Plus de renseignements</a>
+        </div>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"> Année de mise en circulation : {{voiture.anneeMiseCiruclation}}</li>
-        <li class="list-group-item">Kilométrage : {{voiture.kilometrage}}</li>
-        <li class="list-group-item">Prix : {{voiture.prix}} €</li>
-        <li class="list-group-item">Marque : {{voiture.marque}}</li>
-        <li class="list-group-item">Modèle : {{voiture.modele}}</li>
-        <li class="list-group-item">Type de carburant : {{voiture.typeCarburant}}</li>
-        <li class="list-group-item">Reference : {{voiture.reference}}</li>
-      </ul>
-      <div class="card-body pb-5">
-        <a href="#" class="card-link text-decoration-none">Acheter</a>
-        <a href="#" class="card-link text-decoration-none">Plus de renseignements</a>
+      <div>
+        <img src="../../assets/image/tableau de bord.png" class="card-img-top mt-5" alt="tableau de bord">
+        <img src="../../assets/image/arriere de voiture.png" class="card-img-top mt-5" alt="arrierre de banquette">
       </div>
     </div>
+
   </div>
 </div>
