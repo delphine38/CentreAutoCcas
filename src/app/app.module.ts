@@ -10,6 +10,9 @@ import { ProfilComponent } from './profil/profil.component';
 import { AnnonceDetailleesComponent } from './annonce-detaillees/annonce-detaillees.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouterModule, Routes } from '@angular/router';
+import { GererMonCompteComponent } from './gerer-mon-compte/gerer-mon-compte.component';
+import { GererMesGaragesComponent } from './gerer-mes-garages/gerer-mes-garages.component';
+import { GrandeDescriptionComponent } from './grande-description/grande-description.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { RouterModule, Routes } from '@angular/router';
     ConnexionComponent,
     ProfilComponent,
     AnnonceDetailleesComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GererMonCompteComponent,
+    GererMesGaragesComponent,
+    GrandeDescriptionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,17 @@
-.container {
-  width: 1500px;
-}
-.lesannonces article {
+/* .container {
   width: 500px;
-  height: 500px;
+} */
+.lesannonces article {
+  width: 50px;
+  height: 50px;
 }
 .lesannonces article img {
   align-items: center;
-  width: 400px;
-  height: 200px;
+  width: 40px;
+  height: 20px;
+}
+
+.my-flex-row {
+  display: flex;
 }
 /*fin les articles de voitures */

@@ -4,12 +4,14 @@
 <div class="container-fluid row  d-flex justify-content-center">
 
   <div class="container">
-    <div [routerLink]="['/grande-description']" class="card" style="width: 20rem">
-      <img src="../../assets/image/audiA1.jpg" class="card-img-top mt-5" alt="audiA1">
+
+    <div class="card" style="width: 20rem">
+      <a href="#"><img src="../../assets/image/audiA1.jpg" class="card-img-top mt-5" alt="audiA1"></a>
+      <!-- <a [routerLink]="['/grande-description']">AudiA1aaaaaaaaaaaaaaaaa</a> -->
       <div class="card-body">
         <!-- <a class="text-decoration-none text-white" routerLink="/annonce-detaillees">AudiA1aaaaaaaaaaaaaaaaa</a> -->
         <h5 class="card-title text-center">{{voiture.titre}}</h5>
-        <p class="card-text">{{voiture.descriptionLongue}}</p>
+        <!-- <p class="card-text">{{voiture.descriptionLongue}}</p> -->
         <!-- <button type="button" class="btn" (click)="changeOuiNonCourte(click)="descriptionLongue();">Voir plus</button> -->
       </div>
       <ul class="list-group list-group-flush">

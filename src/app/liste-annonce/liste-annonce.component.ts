@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListeAnnonceService } from '../liste-annonce.service';
 import { Voiture } from '../model/voiture.model';
 
+
 @Component({
   selector: 'app-liste-annonce',
   templateUrl: './liste-annonce.component.html',

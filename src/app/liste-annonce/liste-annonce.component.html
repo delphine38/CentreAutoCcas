@@ -1,5 +1,6 @@
 <h1 class="text-center py-5">Rechercher une voiture d'occasion</h1>
 <!--vvvvvvvvvvvvvvv ul des prix, marque, modèle, choisir -->
+
 <ul class="selectionmodele d-flex justify-content-center list-unstyled py-3">
   <li>
     <div class="col">
@@ -9,6 +10,7 @@
           <button ngbDropdownItem>Prix</button>
           <button ngbDropdownItem>Prix</button>
           <button ngbDropdownItem>Prix</button>
+
           <!-- <input type="range" list="tickmarks>
                     <datalist id=" tickmarks">
         <!-- ^^^^^^^^^^^^^^^^^^^^<option value="0" label="100€">
@@ -68,11 +70,8 @@
     </button>
   </li>
 </ul>
-<section class="container">
-  <div class="lesannonces col-2 row">
-    <app-annonce-detaillees *ngFor="let voitureItem of voitures" [voiture]="voitureItem"></app-annonce-detaillees>
-    <!--faire un css pour avoir 3 articlses de voitures sur une lignes, les autres en desssous-->
 
-  </div>
-</section>
+<div class="row">
+  <app-annonce-detaillees *ngFor="let voitureItem of voitures" [voiture]="voitureItem"></app-annonce-detaillees>
+</div>
 <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>

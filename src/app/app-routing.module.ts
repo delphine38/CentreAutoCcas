@@ -5,6 +5,9 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { ListeAnnonceComponent } from './liste-annonce/liste-annonce.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProfilComponent } from './profil/profil.component';
+import { GererMonCompteComponent } from './gerer-mon-compte/gerer-mon-compte.component';
+import { GererMesGaragesComponent } from './gerer-mes-garages/gerer-mes-garages.component';
+import { GrandeDescriptionComponent } from './grande-description/grande-description.component';
 
 const routes: Routes = [
   {path: 'liste-annonce', component: ListeAnnonceComponent},
@@ -12,6 +15,9 @@ const routes: Routes = [
   {path: 'annonce-detaillees', component: AnnonceDetailleesComponent},
   {path: 'connexion', component: ConnexionComponent},
   {path: 'home', component: ListeAnnonceComponent},
+  {path: 'gerer-mes-garages', component: GererMesGaragesComponent},
+  {path: 'gerer-mon-compte', component: GererMonCompteComponent},
+  {path: 'grande-description', component: GrandeDescriptionComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
