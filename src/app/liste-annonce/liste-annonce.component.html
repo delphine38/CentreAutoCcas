@@ -1,0 +1,78 @@
+<h1 class="text-center py-5">Rechercher une voiture d'occasion</h1>
+<!--vvvvvvvvvvvvvvv ul des prix, marque, modèle, choisir -->
+<ul class="selectionmodele d-flex justify-content-center list-unstyled py-3">
+  <li>
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Prix</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Prix</button>
+          <button ngbDropdownItem>Prix</button>
+          <button ngbDropdownItem>Prix</button>
+          <!-- <input type="range" list="tickmarks>
+                    <datalist id=" tickmarks">
+        <!-- ^^^^^^^^^^^^^^^^^^^^<option value="0" label="100€">
+            <option value="50" label="500€">
+            <option value="100" label="1000€"> -->
+          <!--</datalist> -->
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Marque</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Audi</button>
+          <button ngbDropdownItem>BMW</button>
+          <button ngbDropdownItem>Mercedès</button>
+          <button ngbDropdownItem>Peugeot</button>
+          <button ngbDropdownItem>Renault</button>
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Modèle</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>A1</button>
+          <button ngbDropdownItem>A3</button>
+          <button ngbDropdownItem>A5</button>
+          <button ngbDropdownItem>A6</button>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Carburant</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Diesel</button>
+          <button ngbDropdownItem>Electrique</button>
+          <button ngbDropdownItem>Essence</button>
+          <button ngbDropdownItem>Hybride</button>
+        </div>
+      </div>
+    </div>
+
+  </li>
+  <li>
+    <button class="btngeneral py-1" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      valider
+    </button>
+  </li>
+</ul>
+<section class="container">
+  <div class="lesannonces col-2 row">
+    <app-annonce-detaillees *ngFor="let voitureItem of voitures" [voiture]="voitureItem"></app-annonce-detaillees>
+    <!--faire un css pour avoir 3 articlses de voitures sur une lignes, les autres en desssous-->
+
+  </div>
+</section>
+<ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>

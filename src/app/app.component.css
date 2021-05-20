@@ -1,0 +1,32 @@
+/***début de header**/
+header {
+  background-image: url("../assets/image/audicoupe.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 200px;
+  color: white;
+}
+header nav img {
+  width: 100px;
+  height: 50px;
+}
+header nav {
+  display: flex;
+  align-items: flex-end;
+  /**cela n'est pas sur le coté pourquoi?**/
+  justify-content: space-between;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-weight: bold;
+
+  font-size: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+/***fin de header**/

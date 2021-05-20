@@ -1,0 +1,13 @@
+.container {
+  width: 1500px;
+}
+.lesannonces article {
+  width: 500px;
+  height: 500px;
+}
+.lesannonces article img {
+  align-items: center;
+  width: 400px;
+  height: 200px;
+}
+/*fin les articles de voitures */

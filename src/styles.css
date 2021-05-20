@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/***classe générale**/
+.btngeneral {
+  background-color: #356f85;
+  color: white;
+}
+
+/***classe générale**/
+h1 {
+  color: #1c566b;
+}
