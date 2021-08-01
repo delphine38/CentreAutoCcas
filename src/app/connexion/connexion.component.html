@@ -10,21 +10,17 @@
       <div class="form-group col-sm-6 py-2 b">
         <input type="text" class="formulaire form-control" id="name" placeholder="Adresse email *" required>
       </div>
-
       <div class="form-group col-sm-7 d-flex py-2">
         <input type="text" class="formulaire form-control" id="name" placeholder="Mot de passe *" required>
-
       </div>
-
       <div class="col-10">
         <button type="submit" class="btngeneral"><a [routerLink]="['/profil']">Se connecter</a></button>
-
       </div>
       <button type="submit" id="form-submit" class="btngeneral btn-lg pull-right">Mot de passe oublié ?</button>
       <hr>
       <h1 class="text-center py-5">Vous n'avez pas de compte ?</h1>
-      <a href="compte.html"><button type="submit" id="form-submit" class="btngeneral btn-lg pull-right">Créé votre
-          compte</button></a>
+      <button type="submit" class="btngeneral btn-lg pull-right"><a [routerLink]="['/enregistrement']">Créé votre
+          compte</a></button>
     </div>
   </div>
 </div>

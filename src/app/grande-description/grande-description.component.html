@@ -22,13 +22,17 @@
           <li class="list-group-item">Reference : {{voiture.reference}}</li>
         </ul>
         <div class="card-body pb-5">
+          <button [routerLink]="['/formulaire-contact']">Contactez-moi</button>
+          <!--
           <a href="#" class="card-link text-decoration-none">Acheter</a>
-          <a href="#" class="card-link text-decoration-none">Plus de renseignements</a>
+          <a href="#" class="card-link text-decoration-none">Plus de renseignements</a> -->
         </div>
       </div>
-      <div>
-        <img src="../../assets/image/tableau de bord.png" class="card-img-top mt-5" alt="tableau de bord">
-        <img src="../../assets/image/arriere de voiture.png" class="card-img-top mt-5" alt="arrierre de banquette">
+      <div class="d-block">
+        <img src="../../assets/image/tableau de bord.png" class="card-img-top mt-5 flex-wrap w-50" style="width: 10rem"
+          alt="tableau de bord">
+        <img src="../../assets/image/arriere de voiture.png" class="card-img-top mt-5 w-50" style="width: 10rem"
+          alt="arrierre de banquette">
       </div>
     </div>
 

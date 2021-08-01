@@ -13,6 +13,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { GererMonCompteComponent } from './gerer-mon-compte/gerer-mon-compte.component';
 import { GererMesGaragesComponent } from './gerer-mes-garages/gerer-mes-garages.component';
 import { GrandeDescriptionComponent } from './grande-description/grande-description.component';
+import { FormulaireContactComponent } from './formulaire-contact/formulaire-contact.component';
+import { CGUComponent } from './cgu/cgu.component';
+import { MentionLegaleComponent } from './mention-legale/mention-legale.component';
+import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
+import { EnregistrementComponent } from './enregistrement/enregistrement.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { GrandeDescriptionComponent } from './grande-description/grande-descript
     PageNotFoundComponent,
     GererMonCompteComponent,
     GererMesGaragesComponent,
-    GrandeDescriptionComponent
+    GrandeDescriptionComponent,
+    FormulaireContactComponent,
+    CGUComponent,
+    MentionLegaleComponent,
+    PolitiqueDeConfidentialiteComponent,
+    EnregistrementComponent
   ],
   imports: [
     BrowserModule,

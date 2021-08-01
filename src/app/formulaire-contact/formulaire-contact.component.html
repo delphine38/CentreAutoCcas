@@ -1,0 +1,24 @@
+<h1 class="text-center py-5">Ce véhicule vous interresse ? </h1>
+
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="col-10">
+      <div class="form-group col-sm-6 py-2 b">
+        <textarea formControlName="messages" id="" cols="55" rows="5">Indiquez ci votre message</textarea>
+        <!-- <input type="text-area" class="formulaire form-control" id="name" placeholder="Ici votre message *" required> -->
+      </div>
+      <div class="form-group col-sm-6 py-2 b">
+        <input type="text" class="formulaire form-control" id="name" placeholder="Adresse email *" required>
+      </div>
+
+      <div class="col-10">
+        <button type="submit" class="btngeneral"><a [routerLink]="['/#']">Envoyer</a></button>
+      </div>
+      <!-- <button type="submit" id="form-submit" class="btngeneral btn-lg pull-right">Mot de passe oublié ?</button>
+      <hr>
+      <h1 class="text-center py-5">Vous n'avez pas de compte ?</h1>
+      <a href="compte.html"><button type="submit" id="form-submit" class="btngeneral btn-lg pull-right">Créé votre
+          compte</button></a> -->
+    </div>
+  </div>
+</div>
