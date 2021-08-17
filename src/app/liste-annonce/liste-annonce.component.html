@@ -108,10 +108,40 @@
     </button>
   </li>
 </ul>
+
 <div class="container">
+  <div *ngFor="let annonce of annonces">
+    <div class="col-1">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <img src="{{ annonce.image }}" width="200px">
+
+          <p><strong>Titre : {{ annonce.title }}</strong></p>
+          <p><strong>Description : {{ annonce.description }}</strong></p>
+          <p><strong>Année : {{ annonce.year }}</strong></p>
+          <p><strong>Kilometrage : {{ annonce.kilometer }} Km</strong></p>
+          <p><strong>id : {{ annonce.brand }}</strong></p>
+          <p><strong>Modele : {{ annonce.model }} €</strong></p>
+          <p><strong>Carburant : {{ annonce.fuel }} €</strong></p>
+
+
+
+          <div class="col-4">
+            <button class="btn bg-danger"(click)="deleteShort(short.id)">Supprimer</button>
+
+            <a (click)="ajouteLesArticlesDansLePanier(short)" class="btn bg-success">Ajoute au panier</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="container">
   <div class="row">
     <app-annonce-detaillees *ngFor="let voitureItem of voitures" [voiture]="voitureItem"></app-annonce-detaillees>
   </div>
-</div>
+</div>-->
 
 <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
