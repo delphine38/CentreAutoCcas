@@ -18,6 +18,7 @@ import { CGUComponent } from './cgu/cgu.component';
 import { MentionLegaleComponent } from './mention-legale/mention-legale.component';
 import { PolitiqueDeConfidentialiteComponent } from './politique-de-confidentialite/politique-de-confidentialite.component';
 import { EnregistrementComponent } from './enregistrement/enregistrement.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { EnregistrementComponent } from './enregistrement/enregistrement.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
