@@ -1,22 +1,28 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Voiture } from './model/voiture.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListeAnnonceService {
+export class ListeAnnonceService  implements OnInit {
+  mesVoitures: any
 
-  lesVoitures: Voiture[]=[
-    new Voiture("../../assets/image/audiA1.jpg", "Audi A1", "Très belle Audi A3, peu rouler, confort cuir de vachette, couleur camel.Electrique /110 000km. Boite automatique pour confort de conduite optimisé. Palette au volant,tableau de bord intuitif. Bluetooth. Possibilité de discution de prix à l'essai.", "30 000", "2020", "120 000", "Audi", "A1", "Electrique","AudiA1"),
-    new Voiture("../../assets/image/bmwSerie1.jp","Bmw Série 1", "La BMW Série 1 n'a rien à envier à ses grandes sœurs. Avec un style combinant harmonieusement sportivité et luxe, elle affiche un look très audacieux. Comme cela a été fait pour le reste de la gamme, la Série 1  adopte une calandre", "20 000","2020","120 000","BMw","Série 1", "Diesel","BmwSérie1"),
-     new Voiture("../assets/image/bmwSerie1.jp","Bmw Série 1", "La BMW Série 1 n'a rien à envier à ses grandes sœurs. Avec un style combinant harmonieusement sportivité et luxe, elle affiche un look très audacieux. Comme cela a été fait pour le reste de la gamme, la Série 1  adopte une calandre", "20 000","2020","120 000","BMw","Série 1", "Diesel","BmwSérie1"),
-     new Voiture("../assets/image/bmwSerie1.jp","Bmw Série 1", "La BMW Série 1 n'a rien à envier à ses grandes sœurs. Avec un style combinant harmonieusement sportivité et luxe, elle affiche un look très audacieux. Comme cela a été fait pour le reste de la gamme, la Série 1  adopte une calandre", "20 000","2020","120 000","BMw","Série 1", "Diesel","BmwSérie1"),
-     new Voiture("../assets/image/bmwSerie1.jp","Bmw Série 1", "La BMW Série 1 n'a rien à envier à ses grandes sœurs. Avec un style combinant harmonieusement sportivité et luxe, elle affiche un look très audacieux. Comme cela a été fait pour le reste de la gamme, la Série 1  adopte une calandre", "20 000","2020","120 000","BMw","Série 1", "Diesel","BmwSérie1")
-  ];
-  // voitures: Voiture[] = [
 
-  // ];
+  constructor(private serviceVoiture: ListeAnnonceService, private http: HttpClient) { }
 
-  constructor() { }
+  getAnnonceDelphine(): Observable<Voiture[]> {
+    return this.http.get<Voiture[]>("https://powerful-badlands-63524.herokuapp.com/api/annonce");
+  }
+
+
+
+  ngOnInit(): void {
+    this.serviceVoiture.getAnnonceDelphine().subscribe((data:any)=>
+      consol.log(data);
+    this.mesVoitures = data.annonce
+
+  )
+  }
 
 }
