@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'mention-legale', component: MentionLegaleComponent},
   {path: 'politique-de-confidentialite', component: PolitiqueDeConfidentialiteComponent},
   {path: 'enregistrement', component: EnregistrementComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', component: ListeAnnonceComponent},
   { path: '**', component: PageNotFoundComponent },
 ];
 

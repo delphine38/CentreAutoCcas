@@ -1,28 +1,21 @@
-import { Injectable } from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Voiture } from './model/voiture.model';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListeAnnonceService  implements OnInit {
-  mesVoitures: any
+export class ListeAnnonceService {
+  data!: any;
+  mesVoitures!: any[];
 
 
-  constructor(private serviceVoiture: ListeAnnonceService, private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getAnnonceDelphine(): Observable<Voiture[]> {
-    return this.http.get<Voiture[]>("https://powerful-badlands-63524.herokuapp.com/api/annonce");
+  getAnnonceDelphine(): Observable<any> {
+    return this.http.get<any>('http://localhost:8000/annonce');
   }
 
-
-
-  ngOnInit(): void {
-    this.serviceVoiture.getAnnonceDelphine().subscribe((data:any)=>
-      consol.log(data);
-    this.mesVoitures = data.annonce
-
-  )
-  }
 
 }

@@ -5,13 +5,13 @@
   <li>
     <div class="col">
       <div ngbDropdown class="d-inline-block">
-        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Marque</button>
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{marque}}</button>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button ngbDropdownItem>Audi</button>
-          <button ngbDropdownItem>BMW</button>
-          <button ngbDropdownItem>Mercedès</button>
-          <button ngbDropdownItem>Peugeot</button>
-          <button ngbDropdownItem>Renault</button>
+          <button ngbDropdownItem (click)='brandHandler("audi")'>Audi</button>
+          <button ngbDropdownItem (click)='brandHandler("bmw")'>BMW</button>
+          <button ngbDropdownItem (click)='brandHandler("mercedes")'>Mercedès</button>
+          <button ngbDropdownItem (click)='brandHandler("peugeot")'>Peugeot</button>
+          <button ngbDropdownItem (click)='brandHandler("renault")'>Renault</button>
         </div>
       </div>
     </div>
@@ -102,38 +102,60 @@
 
 
   <li>
-    <button class="btngeneral py-1" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="false">
+    <button (click)="resetHandler()" class="btngeneral py-1" type="button" id="dropdownMenu2" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      reset
+    </button>
+  </li>
+
+
+  <li>
+    <button (click)="validateHandeler()" class="btngeneral py-1" type="button" id="dropdownMenu2" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
       valider
     </button>
   </li>
 </ul>
 
+
+<h1 class="text-center py-5">Les différentes annonces</h1>
+
+
+
+
+
+
+
+
+
 <div class="container">
-  <div *ngFor="let annonce of voitures">
-    <div class="col-1">
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <img src="{{ annonce.img }}" width="200px">
+  <div class="p-1 d-flex flex-wrap text-center">
 
-          <p><strong>Titre : {{ annonce.titre }}</strong></p>
-          <p><strong>Description : {{ annonce.descriptionLongue }}</strong></p>
-          <p><strong>Année : {{ annonce.anneeMiseCiruclation }}</strong></p>
-          <p><strong>Kilometrage : {{ annonce.kilometrage }} Km</strong></p>
-          <p><strong>id : {{ annonce.marque }}</strong></p>
-          <p><strong>Modele : {{ annonce.modele }} €</strong></p>
-          <p><strong>Carburant : {{ annonce.typeCarburant }} €</strong></p>
 
+    <div *ngFor="let annonce of dataVoitures">
+      <div class="col-1">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <img src="{{ annonce.image }}" width="200px">
+
+            <p><strong>Titre : {{ annonce.title }}</strong></p>
+            <p><strong>Description : {{ annonce.description }}</strong></p>
+            <p><strong>Année : {{ annonce.year }}</strong></p>
+            <p><strong>Kilometrage : {{ annonce.kilometer }} Km</strong></p>
+            <p><strong>id : {{ annonce.brand }}</strong></p>
+            <p><strong>Modele : {{ annonce.model }} €</strong></p>
+            <p><strong>Carburant : {{ annonce.fuel }} €</strong></p>
+
+          </div>
         </div>
       </div>
     </div>
+
+
   </div>
 </div>
 
-<!--<div class="container">
-  <div class="row">
-    <app-annonce-detaillees *ngFor="let voitureItem of voitures" [voiture]="voitureItem"></app-annonce-detaillees>
-  </div>
-</div>-->
 
-<ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+<div class="justify-content-center text-center">
+  <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+</div>

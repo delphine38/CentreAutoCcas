@@ -11,8 +11,10 @@ import { Voiture } from '../model/voiture.model';
 })
 export class ListeAnnonceComponent implements OnInit {
   page = 1;
+  marque = 'Marque';
+  dataVoitures!: any[];
 
-  voitures: Voiture[] = [];
+  voitures: any = [];
 
 
 
@@ -35,11 +37,29 @@ export class ListeAnnonceComponent implements OnInit {
   constructor(private serviceVoiture: ListeAnnonceService) { }
 
 
+  brandHandler(brand: string): void {
+    this.marque = brand;
+  }
 
+  resetHandler() {
+    this.dataVoitures = this.voitures;
+  }
+  validateHandeler() {
+    if (this.dataVoitures) {
 
+      let tempArr2: any = this.dataVoitures.filter(obj => obj.title.toLowerCase().includes(this.marque.toLocaleLowerCase()))
+      this.dataVoitures = tempArr2;
+
+    }
+
+  }
 
   ngOnInit(): void {
-    this.voitures = this.serviceVoiture.lesVoitures;
+    this.serviceVoiture.getAnnonceDelphine().subscribe(r => {
+      this.dataVoitures = r;
+      this.voitures = r;
+      console.log(this.dataVoitures);
+    });
   }
 
 }

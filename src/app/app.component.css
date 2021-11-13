@@ -29,4 +29,21 @@ header nav ul li a {
   text-decoration: none;
   color: white;
 }
+
+.navbar-toggler-icon{
+  color: white;
+}
 /***fin de header**/
+
+
+/*
+version mobile
+ */
+
+@media (min-width: 992px) {
+  burger{
+    display: none;
+  }
+}
+
+

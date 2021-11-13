@@ -42,7 +42,6 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     HttpClientModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
